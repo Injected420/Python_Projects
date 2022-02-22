@@ -1,7 +1,10 @@
-![Kali Linux Logo](https://forums.kali.org/images/misc/kali-2.0-logo-TM.png)
+## Personal Repo
 
+**Name**: Chris R.
 
-#### 👋 Hi, I’m `@Injected420`
+**Interests**: Computers/Technology
+
+👋 **`@Injected420`**
 
 
 <!---

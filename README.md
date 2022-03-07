@@ -6,7 +6,9 @@
 
 👋 **`@Injected420`**
 
-Visit my website @ [Sly-Security](https://h4ck.sly-security.com/)
+Visit my website @ [Sly-Inovations](https://h4ck.sly-security.com/)
+
+I will be updating this repo with different code snippets I have created & collected, as well as leaving links for documents that relate to the topic.
 
 
 <!---

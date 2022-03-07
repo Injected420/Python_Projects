@@ -5,6 +5,8 @@
 **Interests**: Computers/Technology
 
 👋 **`@Injected420`**
+This repo is/will be filled with programs I have written. Mostly in **Python** because Python is awesome!
+Most of these programs can be downloaded an tweaked to fit your needs or even built upon to create something greater.
 
 Visit my website @ [Sly-Inovations](https://h4ck.sly-security.com/)
 

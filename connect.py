@@ -1,4 +1,3 @@
-#! /bin/python3
 import socket
 
 target_host = str(input("# Enter Host to Connect to: "))

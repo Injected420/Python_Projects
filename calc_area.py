@@ -1,5 +1,7 @@
 import time
 import sys
+
+
 # This program will calculate the area of a cube
 
 def cube_area():
@@ -8,7 +10,7 @@ def cube_area():
     print("[*] The surface of the cube is: " + format(surface_area, '.3f'))
 
 
-#cube_area()
+# cube_area()
 
 
 def triangle():
@@ -25,7 +27,7 @@ def triangle():
     print("The perimeter is:", perim)
 
 
-#triangle()
+# triangle()
 
 
 def canvote():
@@ -35,13 +37,13 @@ def canvote():
         time.sleep(1)
         years_until = 18 - user_age
         print("[*] We will check how many years left until you can vote.")
-        print(years_until)
+        print("[*] You have " + str(years_until) + " years to go until you can vote.")
     elif user_age >= 18:
         registered = str(input("[*] Have you registered to vote yet?"))
         if registered.lower() == "yes" or registered.lower() == "yea" or registered.lower() == "yup" or registered.lower() == 'y' or registered.lower() == 'Y':
             print("[*] You are able to vote!!")
 
-        elif registered.lower() == "no" or registered.lower() == "na" or registered.lower() == "nope":
+        elif registered.lower() == "no" or registered.lower() == "na" or registered.lower() == "nope" or registered.lower() == "n" or registered.lower() == "N" or registered.lower() == "Nope":
             print("[*] Sorry you need to register before you can vote.")
         else:
             print("[*] Sorry, incorrect input")

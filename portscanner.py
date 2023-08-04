@@ -1,9 +1,20 @@
-# %%
 import socket
 import threading
-import theHarvester
 import IPy as ipy
 import requests
+
+class Color:
+    RESET = "\033[0m"
+    RED = "\033[31m"
+    GREEN = "\033[32m"
+    YELLOW = "\033[33m"
+    BLUE = "\033[34m"
+    MAGENTA = "\033[35m"
+    CYAN = "\033[36m"
+    WHITE = "\033[37m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
+    
 
 
 
@@ -20,18 +31,28 @@ def port_scan(ipaddress, port):
         sock = socket.socket()
         sock.settimeout(0.10)
         sock.connect((ipaddress, port))
-        print('[+] Port ' + str(port) + ' is Open.')
+        print(f'[{Color.GREEN}+{Color.RESET}] Port {Color.BOLD}{port}{Color.RESET} is Open.')
 
     except:
-        print('[-] Port ' + str(port) + ' is Closed')
+        pass
+        # Turning off printing off closed ports
+        # print(f'[-] Port {port} is Closed')
 
-IPADDRESS = input("$ Enter Target to Scan: ")
-port = int(input("$ Enter the last port number you want to scan: "))
-port = range(port)
 
-converted_ip = checkIP(IPADDRESS)
+
+
+
 def do_scan():
-    for i in port:
-        port_scan(converted_ip, port[i])
+    try:
+        IPADDRESS = input(f"{Color.BLUE}${Color.RESET} Enter Target to Scan: ")
+        port = int(input(f"$ Enter the last port number you want to scan: "))
+    
+        converted_ip = checkIP(IPADDRESS)
+    
+        for i in range(1, port, + 1):
+            port_scan(converted_ip, i)
+    except KeyboardInterrupt:
+        print("\nScanning Ended by user (Ctrl+c). Exiting...")
 
-do_scan()
+if __name__ == "__main__":
+    do_scan()

@@ -1,7 +1,7 @@
 import socket
 import threading
 import IPy as ipy
-import requests
+import requests, sys
 
 class Color:
     RESET = "\033[0m"
@@ -33,11 +33,8 @@ def port_scan(ipaddress, port):
         sock.connect((ipaddress, port))
         print(f'[{Color.GREEN}+{Color.RESET}] Port {Color.BOLD}{port}{Color.RESET} is Open.')
 
-    except:
-        pass
-        # Turning off printing off closed ports
-        # print(f'[-] Port {port} is Closed')
-
+    except :
+        print(f'[{Color.RED}-{Color.RESET}] Port {port} is Closed')
 
 
 
@@ -45,14 +42,14 @@ def port_scan(ipaddress, port):
 def do_scan():
     try:
         IPADDRESS = input(f"{Color.BLUE}${Color.RESET} Enter Target to Scan: ")
-        port = int(input(f"$ Enter the last port number you want to scan: "))
+        port = int(input(f"{Color.BLUE}${Color.RESET} Enter the last port number you want to scan: "))
     
         converted_ip = checkIP(IPADDRESS)
     
-        for i in range(1, port, + 1):
+        for i in range(1, port + 1):
             port_scan(converted_ip, i)
     except KeyboardInterrupt:
         print("\nScanning Ended by user (Ctrl+c). Exiting...")
+        sys.exit()
 
-if __name__ == "__main__":
-    do_scan()
+do_scan()

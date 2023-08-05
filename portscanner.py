@@ -31,10 +31,10 @@ def port_scan(ipaddress, port):
         sock = socket.socket()
         sock.settimeout(0.10)
         sock.connect((ipaddress, port))
-        print(f'[{Color.GREEN}+{Color.RESET}] Port {Color.BOLD}{port}{Color.RESET} is Open.')
+        print(f'[{Color.GREEN}+{Color.RESET}] Port: {Color.BOLD}{port}{Color.RESET} is Open.')
 
     except :
-        print(f'[{Color.RED}-{Color.RESET}] Port {port} is Closed')
+        print(f'[{Color.RED}-{Color.RESET}] Port: {Color.BOLD}{port}{Color.RESET} is Closed')
 
 
 
@@ -49,7 +49,7 @@ def do_scan():
         for i in range(1, port + 1):
             port_scan(converted_ip, i)
     except KeyboardInterrupt:
-        print("\nScanning Ended by user (Ctrl+c). Exiting...")
+        print(f"\n[{Color.MAGENTA}*{Color.RESET}] Scanning Ended by user {Color.BOLD}{Color.CYAN}(Ctrl+c){Color.RESET}. Exiting...\n")
         sys.exit()
 
 do_scan()
